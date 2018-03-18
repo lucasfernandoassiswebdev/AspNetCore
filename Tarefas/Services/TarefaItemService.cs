@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -42,6 +43,15 @@ namespace Tarefas.Services
         public TarefaItem GetTarefaById(int? id)
         {
             return _context.Tarefas.Find(id);
+        }
+
+        public async Task UpdateAsync(TarefaItem item)
+        {
+            if(item == null)
+                throw new ArgumentException(nameof(item));
+            
+            _context.Tarefas.Update(item);
+            await _context.SaveChangesAsync();
         }
     }
 }

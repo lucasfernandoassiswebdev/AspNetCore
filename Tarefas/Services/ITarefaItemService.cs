@@ -10,5 +10,6 @@ namespace Tarefas.Services
          Task<bool> AdicionarItemAsync(TarefaItem novoItem);
          Task<bool> DeletarItem(int? id);
          TarefaItem GetTarefaById(int? id);
+         Task UpdateAsync(TarefaItem item);
     }
 }

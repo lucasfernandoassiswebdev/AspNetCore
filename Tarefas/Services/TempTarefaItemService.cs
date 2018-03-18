@@ -40,5 +40,10 @@ namespace Tarefas.Services
         {
             throw new NotImplementedException();
         }
+
+        public Task UpdateAsync(TarefaItem item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
