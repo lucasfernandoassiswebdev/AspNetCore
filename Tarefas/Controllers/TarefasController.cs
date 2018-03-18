@@ -26,11 +26,8 @@ namespace Tarefas.Controllers
         }
 
         [HttpGet]
-        public IActionResult AdicionarItemTarefa()
-        {
-            return View();
-        }
-
+        public IActionResult AdicionarItemTarefa() => View();
+        
         [HttpPost]
         public async Task<IActionResult> AdicionarItemTarefa([Bind("Id,EstaCompleta,Nome,DataConclusao")] TarefaItem tarefa)
         {
@@ -42,6 +39,26 @@ namespace Tarefas.Controllers
             }
 
             return View(tarefa);
+        }
+
+        //GET tarefas/delete/5
+        public IActionResult Delete(int? id){
+            if(id == null)
+                return NotFound();
+            
+            var tarefaItem = _tarefaItemService.GetTarefaById(id);
+            if(tarefaItem == null)
+                return NotFound();
+
+            return View(tarefaItem);
+        }
+
+        //Esta Ation name é uma espécie de rota, será levada em conta o Nome "Delete"
+        //Ao chamar o método ao invés do nome "DeleteConfirmed"
+        [HttpPost,ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id){
+            await _tarefaItemService.DeletarItem(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

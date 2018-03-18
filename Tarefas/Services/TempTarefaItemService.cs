@@ -12,6 +12,11 @@ namespace Tarefas.Services
             throw new NotImplementedException();
         }
 
+        public Task<bool> DeletarItem(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<TarefaItem>> GetItemAsync()
         {
             IEnumerable<TarefaItem> items = new []
@@ -29,6 +34,11 @@ namespace Tarefas.Services
             };
 
             return Task.FromResult(items);
+        }
+
+        public TarefaItem GetTarefaById(int? id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

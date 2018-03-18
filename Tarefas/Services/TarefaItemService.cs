@@ -29,6 +29,19 @@ namespace Tarefas.Services
             return await _context.SaveChangesAsync() == 1;
         }
 
+        public async Task<bool> DeletarItem(int? id)
+        {
+            //Save changes retorna o numero de linhas afetadas
+            TarefaItem tarefa = _context.Tarefas.Find(id);
+            _context.Tarefas.Remove(tarefa);
+            return await _context.SaveChangesAsync() == 1;
+        }
+
         public async Task<IEnumerable<TarefaItem>> GetItemAsync() => await _context.Tarefas.Where(t => t.EstaCompleta == false).ToArrayAsync();
+
+        public TarefaItem GetTarefaById(int? id)
+        {
+            return _context.Tarefas.Find(id);
+        }
     }
 }
