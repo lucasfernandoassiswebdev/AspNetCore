@@ -16,6 +16,19 @@ namespace Tarefas.Services
             _context = context;
         }
 
+        public async Task<bool> AdicionarItemAsync(TarefaItem novoItem)
+        {
+            var tarefa = new TarefaItem
+            {
+                EstaCompleta = false,
+                Nome = novoItem.Nome,
+                DataConclusao = novoItem.DataConclusao
+            };
+
+            _context.Tarefas.Add(tarefa);
+            return await _context.SaveChangesAsync() == 1;
+        }
+
         public async Task<IEnumerable<TarefaItem>> GetItemAsync() => await _context.Tarefas.Where(t => t.EstaCompleta == false).ToArrayAsync();
     }
 }

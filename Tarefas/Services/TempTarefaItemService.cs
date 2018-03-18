@@ -7,6 +7,11 @@ namespace Tarefas.Services
 {
     public class TempTarefaItemService : ITarefaItemService
     {
+        public Task<bool> AdicionarItemAsync(TarefaItem novoItem)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<TarefaItem>> GetItemAsync()
         {
             IEnumerable<TarefaItem> items = new []

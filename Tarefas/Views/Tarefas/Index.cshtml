@@ -17,17 +17,18 @@
                         <td><input type="checkbox" name="@tarefa.Id" value="true" class="done-checkbox"></td>
                         <td>@tarefa.Nome</td>
                         <td>@tarefa.DataConclusao</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@tarefa.Id">Editar</a> |
+                            <a asp-action="Delete" asp-route-id="@tarefa.Id">Deletar</a>
+                        </td>
                     </tr>
                 }           
             </tbody>
     </table>
 
     <div class="panel-footer add-item-form">
-        <form>
-            <div id="add-item-error" class="text-danger"></div>
-            <label for="add-item-title">Incluir nova tarefa: </label>
-            <input id="add-item-title"/>
-            <button type="button" id="add-item-button">Incluir</button>
+        <form asp-controller="Tarefas" asp-action="AdicionarItemTarefa" method="GET">
+            <button type="submit" id="add-item-button" class="btn-success">Incluir nova tarefa</button>
         </form>
     </div>
 </div>
