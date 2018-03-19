@@ -15,14 +15,14 @@ namespace Tarefas.Controllers
             _tarefaItemService = tarefaItemService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(bool? criterio)
         {
             ViewData["Title"] = "Gerenciar lista de tarefas";
 
             //obter itens da tarefa
             return View(new TarefaViewModel
             {
-                TarefaItens = await _tarefaItemService.GetItemAsync()
+                TarefaItens = await _tarefaItemService.GetItemAsync(criterio)
             });
         }
 

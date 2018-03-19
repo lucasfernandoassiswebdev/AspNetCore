@@ -9,9 +9,13 @@ namespace Tarefas.Models
         public int Id { get; set; }
         [Display(Name = "Tarefa Completa")]
         public bool EstaCompleta { get; set; }
-        [Display(Name="Nome da Tarefa"),Required(ErrorMessage="O nome da tarefa é obrigatório"),StringLength(200)] 
+        [Display(Name = "Nome da Tarefa")]
+        [Required(ErrorMessage = "O nome da tarefa é obrigatório", AllowEmptyStrings = false)]
+        [StringLength(200)]
         public string Nome { get; set; }
-        [Display(Name="Data de conclusão"), Required(ErrorMessage="Informe a data de conclusão da tarefa")]
+        [Display(Name = "Data de conclusão")]
+        [Required(ErrorMessage = "Informe a data de conclusão da tarefa")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d}")]
         public DateTimeOffset? DataConclusao { get; set; }
     }
 }

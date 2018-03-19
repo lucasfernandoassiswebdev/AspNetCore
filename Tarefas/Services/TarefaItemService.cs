@@ -38,18 +38,21 @@ namespace Tarefas.Services
             return await _context.SaveChangesAsync() == 1;
         }
 
-        public async Task<IEnumerable<TarefaItem>> GetItemAsync() => await _context.Tarefas.Where(t => t.EstaCompleta == false).ToArrayAsync();
-
-        public TarefaItem GetTarefaById(int? id)
+        public async Task<IEnumerable<TarefaItem>> GetItemAsync(bool? criterio)
         {
-            return _context.Tarefas.Find(id);
+            if (criterio != null)
+                return await _context.Tarefas.Where(t => t.EstaCompleta == criterio).ToArrayAsync();
+            
+            return await _context.Tarefas.ToArrayAsync();
         }
+
+        public TarefaItem GetTarefaById(int? id) => _context.Tarefas.Find(id);
 
         public async Task UpdateAsync(TarefaItem item)
         {
-            if(item == null)
+            if (item == null)
                 throw new ArgumentException(nameof(item));
-            
+
             _context.Tarefas.Update(item);
             await _context.SaveChangesAsync();
         }

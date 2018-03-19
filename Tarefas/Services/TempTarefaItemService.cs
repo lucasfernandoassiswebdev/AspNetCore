@@ -17,7 +17,7 @@ namespace Tarefas.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TarefaItem>> GetItemAsync()
+        public Task<IEnumerable<TarefaItem>> GetItemAsync(bool? criterio)
         {
             IEnumerable<TarefaItem> items = new []
             {

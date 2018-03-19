@@ -1,0 +1,12 @@
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\bin\Debug\netcoreapp2.0\app.db
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\bin\Debug\netcoreapp2.0\TarefasTemp.deps.json
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\bin\Debug\netcoreapp2.0\TarefasTemp.runtimeconfig.json
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\bin\Debug\netcoreapp2.0\TarefasTemp.runtimeconfig.dev.json
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\bin\Debug\netcoreapp2.0\TarefasTemp.dll
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\bin\Debug\netcoreapp2.0\TarefasTemp.pdb
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\obj\Debug\netcoreapp2.0\TarefasTemp.csproj.CoreCompileInputs.cache
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\obj\Debug\netcoreapp2.0\TarefasTemp.AssemblyInfoInputs.cache
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\obj\Debug\netcoreapp2.0\TarefasTemp.AssemblyInfo.cs
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\obj\Debug\netcoreapp2.0\TarefasTemp.dll
+C:\Users\LUCASFERNANDODEASSIS\desktop\Projetos\ASP\aspncore\TarefasTemp\obj\Debug\netcoreapp2.0\TarefasTemp.pdb
