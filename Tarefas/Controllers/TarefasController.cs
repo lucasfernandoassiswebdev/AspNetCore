@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tarefas.Models;
@@ -58,6 +59,7 @@ namespace Tarefas.Controllers
 
         //Esta Ation name é uma espécie de rota, será levada em conta o Nome "Delete"
         //Ao chamar o método ao invés do nome "DeleteConfirmed"
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -78,7 +80,8 @@ namespace Tarefas.Controllers
             return View(tarefaItem);
         }
 
-        [HttpPost,ValidateAntiForgeryToken]
+        [HttpPost, ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,EstaCompleta,Nome,DataConclusao")] TarefaItem tarefaItem)
         {
             if (id != tarefaItem.Id)
@@ -90,7 +93,7 @@ namespace Tarefas.Controllers
                 {
                     await _tarefaItemService.UpdateAsync(tarefaItem);
                 }
-                catch(DbUpdateConcurrencyException) //Tratamento de concorrência (2 usuários editando ao mesmo tempo)
+                catch (DbUpdateConcurrencyException) //Tratamento de concorrência (2 usuários editando ao mesmo tempo)
                 {
                     throw;
                 }
