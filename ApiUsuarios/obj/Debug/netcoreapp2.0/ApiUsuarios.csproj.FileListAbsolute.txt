@@ -1,0 +1,10 @@
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\bin\Debug\netcoreapp2.0\ApiUsuarios.deps.json
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\bin\Debug\netcoreapp2.0\ApiUsuarios.runtimeconfig.json
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\bin\Debug\netcoreapp2.0\ApiUsuarios.runtimeconfig.dev.json
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\bin\Debug\netcoreapp2.0\ApiUsuarios.dll
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\bin\Debug\netcoreapp2.0\ApiUsuarios.pdb
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\obj\Debug\netcoreapp2.0\ApiUsuarios.csproj.CoreCompileInputs.cache
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\obj\Debug\netcoreapp2.0\ApiUsuarios.AssemblyInfoInputs.cache
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\obj\Debug\netcoreapp2.0\ApiUsuarios.AssemblyInfo.cs
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\obj\Debug\netcoreapp2.0\ApiUsuarios.dll
+C:\Users\LUCASFERNANDODEASSIS\Desktop\Projetos\ASP\aspncore\ApiUsuarios\obj\Debug\netcoreapp2.0\ApiUsuarios.pdb
