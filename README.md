@@ -7,5 +7,5 @@ api utilizando tecnologias como:
 * Funcionalidades do Code Generator.
 <br />
 O banco de dados utilizado foi o SQL Server.
-#
+<br />
 #### Colaborador: Lucas Fernando de Assis
