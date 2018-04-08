@@ -5,6 +5,7 @@ api utilizando tecnologias como:
 * Migrations;
 * Injeção de dependência 
 * Funcionalidades do Code Generator.
+<br />
 O banco de dados utilizado foi o SQL Server.
 #
 #### Colaborador: Lucas Fernando de Assis
