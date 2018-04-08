@@ -17,9 +17,9 @@ namespace Tarefas.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<TarefaItem>> GetItemAsync(bool? criterio)
+        public Task<IEnumerable<TarefaItem>> GetItemAsync(bool? criterio, ApplicationUser user)
         {
-            IEnumerable<TarefaItem> items = new []
+            IEnumerable<TarefaItem> items = new[]
             {
                 new TarefaItem{
                     Nome = "Aprender ASP.NET Core 2.0",
@@ -41,7 +41,7 @@ namespace Tarefas.Services
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(TarefaItem item)
+        public Task UpdateAsync(TarefaItem item, ApplicationUser user)
         {
             throw new NotImplementedException();
         }

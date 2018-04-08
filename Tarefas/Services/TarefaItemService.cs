@@ -23,6 +23,7 @@ namespace Tarefas.Services
             {
                 EstaCompleta = false,
                 Nome = novoItem.Nome,
+                OwnerId = novoItem.OwnerId,
                 DataConclusao = novoItem.DataConclusao
             };
 
@@ -38,18 +39,25 @@ namespace Tarefas.Services
             return await _context.SaveChangesAsync() == 1;
         }
 
-        public async Task<IEnumerable<TarefaItem>> GetItemAsync(bool? criterio)
+        public async Task<IEnumerable<TarefaItem>> GetItemAsync(bool? criterio, ApplicationUser user)
         {
             if (criterio != null)
-                return await _context.Tarefas.Where(t => t.EstaCompleta == criterio).ToArrayAsync();
-            
-            return await _context.Tarefas.ToArrayAsync();
+                return await _context.Tarefas
+                                .Where(t => t.EstaCompleta == criterio && t.OwnerId == null || t.OwnerId == user.Id)
+                                .ToArrayAsync();
+
+            return await _context.Tarefas
+                            .Where(t => t.OwnerId == null || t.OwnerId == user.Id)
+                            .ToArrayAsync();
         }
 
         public TarefaItem GetTarefaById(int? id) => _context.Tarefas.Find(id);
 
-        public async Task UpdateAsync(TarefaItem item)
+        public async Task UpdateAsync(TarefaItem item, ApplicationUser user)
         {
+            if(item.OwnerId == null)
+                item.OwnerId = user.Id;
+
             if (item == null)
                 throw new ArgumentException(nameof(item));
 

@@ -7,6 +7,8 @@ namespace Tarefas.Models
     {
         [Key]
         public int Id { get; set; }
+        [StringLength(2000)]
+        public string OwnerId{get;set;}
         [Display(Name = "Tarefa Completa")]
         public bool EstaCompleta { get; set; }
         [Display(Name = "Nome da Tarefa")]
